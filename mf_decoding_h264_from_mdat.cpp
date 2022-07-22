@@ -831,7 +831,9 @@ int main() {
 
 		const uint32_t dataSize = (i == 0 ? sizeof(mdat) : sizeof(mdat2));
 
-		while (data < data + dataSize)
+		const uint8_t* maxData = data + dataSize;
+
+		while (data < maxData)
 		{
 			ComPtr<IMFMediaBuffer> pBuffer = nullptr;
 
